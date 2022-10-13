@@ -1,7 +1,9 @@
 ﻿using Dominio;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -65,7 +67,7 @@ namespace Negocio
         }
 
 
-        public bool buscarArticulo(string codigo)
+        /*public bool buscarArticulo(string codigo)
         {
             try
             {
@@ -304,5 +306,7 @@ namespace Negocio
                 throw ex;
             }
         }
+    }*/
+
+        
     }
-}
