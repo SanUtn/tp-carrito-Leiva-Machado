@@ -21,17 +21,19 @@ namespace TPCarrito
                 listaArticulos = negocio.listarArticulo();
                 Session.Add("listaArticulos", listaArticulos);
             }
-          
-            RepeaterListado.DataSource = listaArticulos;
-            RepeaterListado.DataBind();
-            DropDownList1.DataSource = listaArticulos;
-            DropDownList1.DataBind();
+
+            if (!IsPostBack)
+            {
+                RepeaterListado.DataSource = listaArticulos;
+                RepeaterListado.DataBind();
+            }
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            Articulo art = new Articulo();
+            //Articulo art = new Articulo();
             //DropDownList1.SelectedItem.Value;
+            String capturarValor = ((Button)sender).CommandArgument;
         }
     }
 
