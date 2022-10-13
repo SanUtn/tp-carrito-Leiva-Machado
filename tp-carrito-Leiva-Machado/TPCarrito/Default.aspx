@@ -17,7 +17,7 @@
                                 <p class="card-text"> <%#Eval("Descripcion") %> </p>
                                 <div class="text-center">
                                     <a href="Default.aspx?id="<%#Eval("Id") %>"></a>
-                                    <asp:Button ComandName=nombreArticulo ComandArgument='<%#Eval("Id") %>' OnClick ="btnAceptar_Click" cssclass=" btn btn-primary" ID="btnAgregar" runat="server" Text="Agregar al carrito" />
+                                    <asp:Button ComandName=idArticulo ComandArgument='<%#Eval("Id") %>' OnClick ="btnAceptar_Click" cssclass=" btn btn-primary" ID="btnAgregar" runat="server" Text="Agregar al carrito" />
                                         
                                 </div>
                                
