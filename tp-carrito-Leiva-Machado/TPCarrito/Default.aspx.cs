@@ -15,12 +15,25 @@ namespace TPCarrito
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-
-            listaArticulos = negocio.listarArticulo();
-
+            if (Session["listaArticulos"] == null)
+            {
+                ArticuloNegocio negocio = new ArticuloNegocio();
+                listaArticulos = negocio.listarArticulo();
+                Session.Add("listaArticulos", listaArticulos);
+            }
+          
             RepeaterListado.DataSource = listaArticulos;
             RepeaterListado.DataBind();
+            DropDownList1.DataSource = listaArticulos;
+            DropDownList1.DataBind();
+        }
+
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Articulo art = new Articulo();
+            //DropDownList1.SelectedItem.Value;
         }
     }
+
+
 }

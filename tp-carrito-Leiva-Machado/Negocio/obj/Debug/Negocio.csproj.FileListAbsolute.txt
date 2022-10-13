@@ -7,3 +7,12 @@ E:\Practicas\Facultad\PROG3\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Ne
 E:\Practicas\Facultad\PROG3\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 E:\Practicas\Facultad\PROG3\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.dll
 E:\Practicas\Facultad\PROG3\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.csproj.AssemblyReference.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\bin\Debug\Negocio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\bin\Debug\Dominio.dll
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\Negocio\obj\Debug\Negocio.csproj.CopyComplete
