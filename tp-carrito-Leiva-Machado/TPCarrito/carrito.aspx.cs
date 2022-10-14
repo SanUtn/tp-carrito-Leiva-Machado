@@ -28,7 +28,24 @@ namespace TPCarrito
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            Articulo obj = new Articulo();
+            List<Articulo> listaCarrito = new List<Articulo>();
 
+            listaCarrito = (List<Articulo>)Session["listaArt"];
+            String capturarValor = ((Button)sender).CommandArgument;
+
+            foreach (var art in listaCarrito)
+            {
+                if (art.Id == int.Parse(capturarValor))
+                {
+                    obj = art;
+
+                }
+            }
+            listaCarrito.Remove(obj);
+
+            articulosSeleccionados.DataSource = listaCarrito;
+            articulosSeleccionados.DataBind();
         }
 
         
