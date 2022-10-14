@@ -93,10 +93,12 @@ namespace TPCarrito
         {
             if (ddlCampo.SelectedIndex < 0)
             {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Por favor seleccione el campo para filtrar')", true);
                 return true;
             }
             if (ddlCriterio.SelectedIndex < 0)
             {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Por favor seleccione el criterio para filtrar')", true);
                 return true;
             }
 
@@ -104,10 +106,12 @@ namespace TPCarrito
             {
                 if (string.IsNullOrEmpty(txtBusqueda.Text))
                 {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Cargar precio a filtrar..')", true);
                     return true;
                 }
                 if (!(helper.soloNumeros(txtBusqueda.Text)))
                 {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Solo numeros...')", true);
                     return true;
                 }
             }
@@ -115,6 +119,7 @@ namespace TPCarrito
             {
                 if (string.IsNullOrEmpty(txtBusqueda.Text))
                 {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('Indicar un valor..')", true);
                     return true;
                 }
             }
