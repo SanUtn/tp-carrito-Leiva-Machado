@@ -16,7 +16,7 @@
                                 <p class="card-text"> <%#Eval("Descripcion") %> </p>
                                 <div class="text-center">
                                     <a href="Carrito.aspx?id="<%#Eval("Id") %>"></a>
-                                    <asp:Button ComandName=idArticulo ComandArgument='<%#Eval("Id") %>' OnClick ="btnEliminar_Click" cssclass=" btn btn-primary" ID="btnEliminar" runat="server" Text="Eliminar del carrito" />
+                                    <asp:Button CommandName=idArticulo CommandArgument='<%#Eval("Id") %>' OnClick ="btnEliminar_Click" cssclass=" btn btn-primary" ID="btnEliminar" runat="server" Text="Eliminar del carrito" />
                                         
                                 </div>
                                
@@ -28,6 +28,6 @@
            </div>
     </div>
 
-
-
+    
+  
 </asp:Content>

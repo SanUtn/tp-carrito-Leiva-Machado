@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
 using Dominio;
 using Negocio;
 
@@ -12,38 +13,48 @@ namespace TPCarrito
     public partial class Default : System.Web.UI.Page
     {
         public List<Articulo> listaArticulos { get; set; }
-        public List<String> listaCarrito { get; set; }
+        public List<Articulo> listaCarrito { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["listaArticulos"] == null)
-            {
+        
                 ArticuloNegocio negocio = new ArticuloNegocio();
                 listaArticulos = negocio.listarArticulo();
-                Session.Add("listaArticulos", listaArticulos);
-               
-            }
+            
 
             if (!IsPostBack)
             {
-                RepeaterListado.DataSource = Session["listaArticulos"];
+                RepeaterListado.DataSource = listaArticulos;
                 RepeaterListado.DataBind();
             }
         }
 
         protected void btnAceptar_Click(object sender, EventArgs e)
         {
-            //Articulo art = new Articulo();
-            //DropDownList1.SelectedItem.Value;
+            Articulo obj = new Articulo();
+            
             String capturarValor = ((Button)sender).CommandArgument;
-            //listaCarrito.Add(capturarValor);
-                if (Session["listaId"] == null)
+            Console.WriteLine(capturarValor);
+            foreach (var art in listaArticulos)
+            {
+                if (art.Id == int.Parse(capturarValor))
                 {
-                    Session.Add("listaId", capturarValor);
+                    obj = art;
+ 
+                    Console.WriteLine(art.Id);
                 }
-                else
-                {
-                    ((List<String>)Session["listaId"]).Add(capturarValor);
-                }
+            }
+
+           
+            if (Session["listaArt"] == null)
+            {
+                Session.Add("listaArt", obj);
+            }
+            else
+            {
+             ((List<Articulo>) Session["listaArt"]).Add(obj);
+            
+            }
         }
     }
 
