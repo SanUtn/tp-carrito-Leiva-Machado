@@ -124,3 +124,5 @@ C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiv
 C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\TPCarrito\obj\Debug\TPCarrito.csproj.CopyComplete
 C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\TPCarrito\obj\Debug\TPCarrito.dll
 C:\Users\Intel-Pentium\Documents\GitHub\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\TPCarrito\obj\Debug\TPCarrito.pdb
+E:\Practicas\Facultad\PROG3\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\TPCarrito\bin\Helpers.dll
+E:\Practicas\Facultad\PROG3\tp-carrito-Leiva-Machado\tp-carrito-Leiva-Machado\TPCarrito\bin\Helpers.pdb

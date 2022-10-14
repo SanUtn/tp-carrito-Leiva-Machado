@@ -177,7 +177,7 @@ namespace Negocio
             }
         }
 
-
+        */
         public List<Articulo> filtrar(string campo, string criterio, string filtro)
         {
             List<Articulo> lista = new List<Articulo>();
@@ -273,6 +273,7 @@ namespace Negocio
                 while (datos.Lector.Read()) //mientras tenga datos, crea un objeto nuevo
                 {
                     Articulo art = new Articulo();
+                    art.Id = (int)datos.Lector["Id"];
                     art.CodArticulo = (String)datos.Lector["Codigo"];
                     art.NombreArticulo = (String)datos.Lector["Nombre"];
                     art.Descripcion = (String)datos.Lector["Descripcion"];
@@ -306,9 +307,9 @@ namespace Negocio
                 throw ex;
             }
         }
-    }*/
-
-
     }
 
+
 }
+
+

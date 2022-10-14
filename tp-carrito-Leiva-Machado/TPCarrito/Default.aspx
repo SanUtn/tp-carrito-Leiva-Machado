@@ -5,7 +5,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="mt-5">
         <h1>Listado de productos</h1>
+        <div class="row d-flex justify-content-between">
+            <asp:DropDownList ID="ddlCampo" runat="server" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+            <asp:DropDownList ID="ddlCriterio" runat="server"></asp:DropDownList>
+            <asp:TextBox ID="txtBusqueda" runat="server" placeholder="Ingrese el valor a buscar..."></asp:TextBox>
+            <asp:Button AutoPostBack="false" CssClass=" btn btn-success" ID="btnBusqueda" runat="server" Text="Buscar" OnClick="btnBusqueda_Click" />
+        </div>
+
         <div class="row d-flex">
+
 
             <asp:Repeater ID="RepeaterListado" runat="server">
                 <ItemTemplate>
