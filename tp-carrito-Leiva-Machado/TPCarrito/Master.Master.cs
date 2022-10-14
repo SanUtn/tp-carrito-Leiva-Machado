@@ -24,11 +24,7 @@ namespace TPCarrito
                 {
                     lbCarrito.Visible = true;
                 }
-
             }
-
-
-
         }
     }
 }

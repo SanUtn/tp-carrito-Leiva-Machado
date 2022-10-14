@@ -36,6 +36,7 @@
     <div class="form-floating">
     
     <asp:TextBox ID="txtPrecio" runat="server" cssclass="form-control"></asp:TextBox>
+        <asp:Label ID="lbMensajeCarrito" runat="server" Text="No se han agregado articulos al carrito."></asp:Label>
     </div>
           </div>
         

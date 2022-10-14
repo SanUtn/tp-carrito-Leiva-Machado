@@ -66,9 +66,20 @@ namespace TPCarrito
                 totalAPagar += art.Precio;
             }
 
-            txtPrecio.Visible = true;
-            lbPrecio.Visible = true;
-            txtPrecio.Text = "$" + totalAPagar.ToString();
+            if(listaCarrito.Count() > 0)
+            {
+                txtPrecio.Visible = true;
+                lbPrecio.Visible = true;
+                txtPrecio.Text = "$" + totalAPagar.ToString();
+                lbMensajeCarrito.Visible = false;
+            }
+            else
+            {
+                txtPrecio.Visible = false;
+                lbPrecio.Visible = false;
+                lbMensajeCarrito.Visible = true;
+            }
+          
        
         }
 
