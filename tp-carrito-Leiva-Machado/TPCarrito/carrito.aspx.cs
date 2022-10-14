@@ -14,13 +14,18 @@ namespace TPCarrito
        
         protected void Page_Load(object sender, EventArgs e)
         {
+            txtPrecio.Visible = false;
+            lbPrecio.Visible = false;
+
             if (Session["listaArt"] != null )
             {
                 if (!IsPostBack)
                 {
                     articulosSeleccionados.DataSource = Session["listaArt"];
                     articulosSeleccionados.DataBind();
+                    calculoCarrito();
                 }
+                
             }
             
                
@@ -46,10 +51,27 @@ namespace TPCarrito
 
             articulosSeleccionados.DataSource = listaCarrito;
             articulosSeleccionados.DataBind();
+            calculoCarrito();
         }
 
         
-      
+      public void calculoCarrito()
+        {
+            Articulo obj = new Articulo();
+            List<Articulo> listaCarrito = new List<Articulo>();
+            listaCarrito = (List<Articulo>)Session["listaArt"];
+            decimal totalAPagar = 0;
+
+            foreach (var art in listaCarrito)
+            {
+                totalAPagar += art.Precio;
+            }
+
+            txtPrecio.Visible = true;
+            lbPrecio.Visible = true;
+            txtPrecio.Text = "$" + totalAPagar.ToString();
+       
+        }
 
     }
 }

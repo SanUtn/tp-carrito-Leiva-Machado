@@ -15,6 +15,7 @@
                             <div class="card-body">
                                 <h5 class="card-title"> <%#Eval("NombreArticulo") %> </h5>
                                 <p class="card-text"> <%#Eval("Descripcion") %> </p>
+                                <p class="card-text"> $<%#Eval("Precio") %> </p>
                                 <div class="text-center">
                                    
                                     <asp:Button AutoPostBack="false" CommandName=idArticulo CommandArgument='<%#Eval("Id") %>' OnClick ="btnAceptar_Click" cssclass=" btn btn-primary" ID="btnAgregar" runat="server" Text="Agregar al carrito" />
