@@ -11,7 +11,6 @@ namespace TPCarrito
 {
     public partial class Carrito : System.Web.UI.Page
     {
-       
         protected void Page_Load(object sender, EventArgs e)
         {
             txtPrecio.Visible = false;
@@ -27,7 +26,6 @@ namespace TPCarrito
                 }
                 
             }
-            
                
         }
 
@@ -51,6 +49,7 @@ namespace TPCarrito
 
             articulosSeleccionados.DataSource = listaCarrito;
             articulosSeleccionados.DataBind();
+            Response.Redirect(Request.RawUrl);
             calculoCarrito();
         }
 

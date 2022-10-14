@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,22 @@ namespace TPCarrito
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["listaArt"] != null)
+            {
+                if (((List<Articulo>)Session["listaArt"]).Count() != 0)
+                {
+                    lbCarrito.Visible = true;
+                    lbCarrito.Text = (((List<Articulo>)Session["listaArt"]).Count()).ToString();
+                }
+                else
+                {
+                    lbCarrito.Visible = true;
+                }
+
+            }
+
+
 
         }
     }

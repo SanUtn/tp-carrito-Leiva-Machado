@@ -18,14 +18,13 @@ namespace TPCarrito
         protected void Page_Load(object sender, EventArgs e)
         {
         
-                ArticuloNegocio negocio = new ArticuloNegocio();
-                listaArticulos = negocio.listarArticulo();
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            listaArticulos = negocio.listarArticulo();
             
-
             if (!IsPostBack)
             {
                 RepeaterListado.DataSource = listaArticulos;
-                RepeaterListado.DataBind();
+                RepeaterListado.DataBind();                 
             }
         }
 
@@ -34,27 +33,27 @@ namespace TPCarrito
             Articulo obj = new Articulo();
             List<Articulo> listaCarrito = new List<Articulo>();
                 
-                String capturarValor = ((Button)sender).CommandArgument;
+           string capturarValor = ((Button)sender).CommandArgument;
             
             foreach (var art in listaArticulos)
             {
                 if (art.Id == int.Parse(capturarValor))
                 {
                     obj = art;
- 
                 }
             }
             listaCarrito.Add(obj);
            
             if (Session["listaArt"] == null)
             {
-                Session.Add("listaArt", listaCarrito);
+                Session.Add("listaArt", listaCarrito);               
             }
             else
             {
              ((List<Articulo>) Session["listaArt"]).Add(obj);
-            
             }
+
+            Response.Redirect(Request.RawUrl);
         }
     }
 
