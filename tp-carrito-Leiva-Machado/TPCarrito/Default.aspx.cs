@@ -143,7 +143,6 @@ namespace TPCarrito
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

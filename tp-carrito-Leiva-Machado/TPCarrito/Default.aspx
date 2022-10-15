@@ -3,8 +3,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="mt-5">
-        <h1>Listado de productos</h1>
+    <div class="my-3">
+        <div class="text-center">
+            <h1>Listado de productos</h1>
+        </div>
+        
         <div class="row d-flex justify-content-center px-3 my-3">
             <div class="col-3-md m-3 minimo-input">
                 <asp:DropDownList ID="ddlCampo" runat="server" OnSelectedIndexChanged="ddlCampo_SelectedIndexChanged" AutoPostBack="true" CssClass="form-control"></asp:DropDownList>
@@ -26,10 +29,10 @@
         <div class="row d-flex justify-content-center">
             <asp:Repeater ID="RepeaterListado" runat="server">
                 <ItemTemplate>
-                    <div class="col-3-md m-3">
+                    <div class="col-3-md m-3 d-flex align-items-stretch">
                         <div class="card" style="width: 18rem;">
                             <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="<%#Eval("NombreArticulo") %>">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><%#Eval("NombreArticulo") %> </h5>
                                 <p class="card-text"><%#Eval("Descripcion") %> </p>
                                 <p class="card-text">$<%#Eval("Precio") %> </p>

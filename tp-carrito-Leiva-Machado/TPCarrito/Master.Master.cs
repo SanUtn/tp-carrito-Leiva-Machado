@@ -18,7 +18,7 @@ namespace TPCarrito
                 if (((List<Articulo>)Session["listaArt"]).Count() != 0)
                 {
                     lbCarrito.Visible = true;
-                    lbCarrito.Text = (((List<Articulo>)Session["listaArt"]).Count()).ToString();
+                    lbCarrito.Text = lbCarrito.Text + (((List<Articulo>)Session["listaArt"]).Count()).ToString();
                 }
                 else
                 {
