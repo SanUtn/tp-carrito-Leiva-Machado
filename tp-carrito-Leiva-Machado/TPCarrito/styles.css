@@ -1,0 +1,9 @@
+﻿.minimo-input{
+    min-width: 200px;
+}
+
+@media(max-width: 600px){
+    .minimo-input{
+        width: 300px;
+    }
+}

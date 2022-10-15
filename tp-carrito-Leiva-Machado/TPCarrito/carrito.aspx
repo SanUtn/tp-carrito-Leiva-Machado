@@ -14,13 +14,11 @@
                             <div class="card-body">
                                 <h5 class="card-title"> <%#Eval("NombreArticulo") %> </h5>
                                 <p class="card-text"> <%#Eval("Descripcion") %> </p>
-                                <p class="card-text"> $<%#Eval("Precio") %> </p>
+                                <p class="card-text"> Precio: $<%#Eval("Precio") %> </p>
                                 <div class="text-center">
                                     <a href="Carrito.aspx?id="<%#Eval("Id") %>"></a>
-                                    <asp:Button CommandName=idArticulo CommandArgument='<%#Eval("Id") %>' OnClick ="btnEliminar_Click" cssclass=" btn btn-primary" ID="btnEliminar" runat="server" Text="Eliminar del carrito" />
-                                        
-                                </div>
-                               
+                                    <asp:Button CommandName=idArticulo CommandArgument='<%#Eval("Id") %>' OnClick ="btnEliminar_Click" cssclass=" btn btn-danger" ID="btnEliminar" runat="server" Text="Eliminar" />  
+                                </div>                   
                             </div>
                         </div>
                     </div>
@@ -31,14 +29,17 @@
     
     <!--<div class="col-3">-->
     <!--<div class="card" ID="divPrecio" style="width: 18rem;">-->
-     <div class="input-group mb-3">
+    <div class="row my-3">
+          <div class="input-group mb-3 px-3">
          <asp:Label cssclass="input-group-text" ID="lbPrecio" runat="server" Text="Total a pagar"></asp:Label>
     <div class="form-floating">
     
     <asp:TextBox ID="txtPrecio" runat="server" cssclass="form-control"></asp:TextBox>
-        <asp:Label ID="lbMensajeCarrito" runat="server" Text="No se han agregado articulos al carrito."></asp:Label>
+     <asp:Label ID="lbMensajeCarrito" runat="server" Text="No se han agregado articulos al carrito."></asp:Label>
     </div>
           </div>
+    </div>
+   
         
          
 </asp:Content>
