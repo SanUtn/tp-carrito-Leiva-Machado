@@ -18,7 +18,7 @@
                 <ItemTemplate>
                     <div class="col-3-md m-3">
                         <div class="card" style="width: 18rem;">
-                            <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="<%#Eval("NombreArticulo") %>">
+                            <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="<%#Eval("NombreArticulo") %>" onerror="setDefaultImage(this);">
                             <div class="card-body">
                                 <h5 class="card-title"> <%#Eval("NombreArticulo") %> </h5>
                                 <p class="card-text"> <%#Eval("Descripcion") %> </p>
